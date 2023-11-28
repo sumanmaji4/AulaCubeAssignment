@@ -1,5 +1,14 @@
 import { createContext, useEffect, useState } from 'react'
 
+const myFun = (a, b) => {
+  if (a.priority === b.priority) {
+    if (a.id === b.id) return 0
+    else if (a.id > a.id) return 1
+    else return -1
+  } else if (a.priority > b.priority) return -1
+  else return 1
+}
+
 const TodoContext = createContext({
   todos: [],
   addTodo: (name, description, priority) => {},
@@ -17,7 +26,11 @@ export const TodoContextProvider = (props) => {
   })
 
   useEffect(() => {
-    //console.log(todos)
+    // console.log('before', todos)
+    // setTodos((prevtodos) => {
+    //   return prevtodos.sort(myFun)
+    // })
+    // console.log('after', todos)
     localStorage.setItem('MYTODOS', JSON.stringify(todos))
   }, [todos])
 
@@ -27,6 +40,9 @@ export const TodoContextProvider = (props) => {
         ...prevTodos,
         { id: Date.now(), name, description, priority, done: false },
       ]
+    })
+    setTodos((prevtodos) => {
+      return prevtodos.sort(myFun)
     })
   }
 
@@ -47,6 +63,9 @@ export const TodoContextProvider = (props) => {
         if (todo.id == id) return { id, name, description, priority, done }
         return todo
       })
+    })
+    setTodos((prevtodos) => {
+      return prevtodos.sort(myFun)
     })
   }
 

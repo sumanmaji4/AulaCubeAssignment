@@ -1,0 +1,18 @@
+.homepage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.listItems {
+  margin-top: 20px;
+  padding: 0px;
+  width: 90%;
+}
+
+.bg {
+  background-color: #7fc3d38e;
+  border-radius: 5px;
+  padding: 5px 10px;
+}

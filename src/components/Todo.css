@@ -1,0 +1,55 @@
+.Eachtodo {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(171, 166, 166);
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
+.utilItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 180px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+}
+
+.done {
+  opacity: 0.3;
+}
+
+.bg {
+  background-color: #7fd3c3fe;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.btn {
+  background-color: #7fafd38e;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.lineMark {
+  text-decoration: line-through;
+}
+
+.Low {
+  background-color: #60a3d18d;
+}
+
+.Medium {
+  background-color: #005c918d;
+}
+
+.High {
+  background-color: #0026418d;
+}

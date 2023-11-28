@@ -1,0 +1,23 @@
+.formbody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: #7fafd38e;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+}
+
+.eachItem {
+  margin-top: 10px;
+  padding: 5px;
+}

@@ -4,7 +4,7 @@ import TodoForm from '../components/TodoForm'
 
 function EditPage() {
   const params = useParams()
-  const id = params.id
+  const id = parseInt(params.id)
   return <TodoForm id={id} />
 }
 
