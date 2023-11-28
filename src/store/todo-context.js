@@ -11,11 +11,9 @@ const TodoContext = createContext({
 export const TodoContextProvider = (props) => {
   const [todos, setTodos] = useState(() => {
     const localValue = localStorage.getItem('MYTODOS')
-    if (localValue && localValue.length > 0) {
-      //console.log(localValue)
-      return JSON.parse(localValue)
-    }
-    return []
+    if (typeof localValue === 'undefined') return []
+    //console.log(localValue)
+    return JSON.parse(localValue)
   })
 
   useEffect(() => {
