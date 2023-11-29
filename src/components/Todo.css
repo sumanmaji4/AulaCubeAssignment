@@ -53,3 +53,9 @@
 .High {
   background-color: #0026418d;
 }
+
+@media screen and (max-width: 600px) {
+  .Eachtodo {
+    flex-direction: column;
+  }
+}
